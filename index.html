@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--MAKE A WEBSITE THAT YOU NEED TO FILL OUT A FORM, INPUT(texttype="text" "password") AND TEXTAREA/rezise:none(working and disabled or read only)-->
+    <!--MAKE THE FORM ACTUALLY WORK MAYBE IF SIMPLE ENOUGH?-->
+    <!--MAKE SITE A PARALAX?-->
+    <!--select id with options-->
+    <!--FIELDSET AND LEGEND-->
+    <div class="first_image">
+        <div class="ptext">
+            <!--Span is used for INLINE elements, while div is for BOX elements.-->
+            <span class="border">
+                WORLD CORP
+            </span>
+        </div>
+    </div>
+    <!--The space between the class allows it to have multiple classes in one class-->
+    <section class="section section_light">
+        <h2>The people</h2>
+        <p>You are a nobody here, with over 100,000 people working for this company, there is a 0% chance you will climb ranks, just shut up, and do as your told.</p>
+    </section>
+    <div class="second_image">
+        <div class="ptext">
+            <span class="border trans">
+                What we do
+            </span>
+        </div>
+    </div>
+    <!--Here the class is the same as in previous section, but it had additional section_dark class-->
+    <section class="section section_dark">
+        <h2>The process</h2>
+        <p>We rule the whole world, like why would you not want to work here, there is no way this company fails, like evergrande who are 300billion dollars in debt and on the edge of bankcrupcy</p>
+    </section>
+    <div class="third_image">
+        <div class="ptext">
+            <span class="border trans">
+                APPLY HERE
+            </span>
+        </div>
+    </div>
+    <!--THIS IS FOR THE ASSIGNEMENT-->
+    <section class="section section_dark">
+        <h2>Fill out a quick form and we will see what we can do for you</h2>
+        <div class="mrg10"><label class="readmore" for ="worldcorpreadmore"><strong>Press me for a new window where you can fill out your application.</strong></label></div>
+        <input type="checkbox" id="worldcorpreadmore" class="popupinput">
+        <div class="popup modalwrap modalWrapNew">
+        <div class="modalwrap-content wd60">
+        <label class="close" for="worldcorpreadmore">x</label>
+        <div class="" id="view-more-id-1">
+            <form>
+            <fieldset>
+                <legend>Job form</legend>
+                <!--INPUT FOR fIRST NAME-->
+                <label for="first_name">First name</label>
+                <input type="text" id="first_name" name="first_name" maxlength="20"><br>
+                <!--INPUT FOR LAST NAME-->
+                <label for="last_name">Last time</label>
+                <input type="text" id="last_name" name="last_name" maxlength="20"><br>
+                <!--INPUT FOR MONEY-->
+                <label for="money">How much money do you want to make here an hour</label>
+                <input type="number" id="money" name="money" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"type = "number" maxlength = "2">
+                <p>What skills do you have</p>
+                <input type="checkbox" name="skill1" id="skill1" value="html">
+                <label for="skill1">HTML</label><br>
+                <input type="checkbox" name="skill2" id="skill2" value="html">
+                <label for="skill2">CSS</label><br>
+                <input type="checkbox" name="skill3" id="skill3" value="html">
+                <label for="skill3">JS</label><br>
+                <label for="country">Where do you want to work</label>
+                <select id="country" id="country" name="country">
+                <option value="choose" disabled selected>Choose</option>
+                <option value="Canada">Canada</option>
+                <option value="USA">USA</option>
+                <option value="Norway">Norway</option>
+                <option value="United Kingdom">United Kingdom</option>
+                </select><br>
+                <label for="hire">Why should we hire you</label>
+                <textarea name ="hire" id="hire" placeholder="Why should we hire you">
+                </textarea><br>
+                <label for="skillz" id="skillz">A little bit about the job</label>
+                <textarea readonly name="skillz" id="skillz">This is a very serious jobb, on your daily basis you will have to come to work on time, sit at work computer, do stuff and profit, your hourly wage is 0.1$, if you dont like it, dont apply, but if you do, you will sign your life away.</textarea><br>
+                <input type="submit" value="submit">
+                </fieldset>
+            </form>
+            </div>
+            </div>
+            <label class="outclickhide" for="worldcorpreadmore"></label>
+        </div>
+    </section>
+    <!--THIS IS FOR THE ASSIGNEMENT-->
+    <div class="first_image">
+        <div class="ptext">
+            <span class="border">
+                WORLD CORP
+            </span>
+        </div>
+    </div>
+</body>
+</html>

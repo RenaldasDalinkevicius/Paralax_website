@@ -1,0 +1,133 @@
+body, html {
+    height:100%;
+    margin:0;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+.first_image, .second_image, .third_image {
+    position:relative;
+    opacity: 0.90;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*Fixed = parallax
+    scroll = normal*/
+    background-attachment: fixed;
+}
+.first_image {
+    background-image: url("https://th.bing.com/th/id/R.a313e25e7681bf4b02b0a1eb2b68b70f?rik=S3lWAQLelp0t3w&pid=ImgRaw&r=0");
+    min-height: 100%;
+}
+.second_image {
+    background-image: url("https://www.dentons.com/-/media/images/website/background-images/other/uk-construction-briefing-spring-2016/constructionsiteistock_000040545946_large.jpg");
+    min-height: 400px;
+}
+.third_image {
+    background-image: url("https://st2.depositphotos.com/1017986/5520/i/950/depositphotos_55203349-stock-photo-group-of-smiling-builders-in.jpg");
+    min-height: 400px;
+}
+.section{
+    text-align: center;
+    padding: 50px 80px;
+}
+.section_light {
+    background-color: #f4f4f4;
+    color: #666;
+}
+.section_dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+.ptext {
+    position: absolute;
+    top:50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase
+}
+.border, .ptext {
+    background-color:#111;
+    color: #fff;
+    padding: 20px;
+}
+.ptext, .border.trans {
+    background-color: transparent;
+}
+.readmore {
+    cursor:pointer;
+}
+.popupinput {
+    display: none;
+}
+.modalwrap{
+    position:fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    z-index: 9991;
+    font-size: 14px;
+}
+input.popupinput[type="checkbox"]:checked + .modalwrap { display:block;
+}
+.modalwrap:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(0,0,0,0.8);
+}
+.modalwrap .modalwrap-content {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 2;
+    padding: 16px;
+    border-radius: 6px;
+    max-height: 80%;
+    overflow: auto;
+    background-image: url("https://th.bing.com/th/id/R.b039a8e0ee905c9dbdaeddb77d6849d6?rik=L5FTRwO13HQw%2bQ&pid=ImgRaw&r=0&sres=1&sresct=1");
+    background-size: cover;
+}
+label.outclickhide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+#close {
+    text-align: right;
+}
+#view-more-id-1 {
+    color: #000;
+    text-align: left;
+    font-weight: bold;
+}
+#view-more-id-1 input {
+    border: #000 solid 2px;
+}
+#view-more-id-1 textarea {
+    height: 100px;
+    width: 200px;
+    resize: none;
+}
+/*For phones it it removes the parallax effect, and the images just become scroll-able*/
+@media(max-width:568px) {
+    .first.image, .second_image, .third_image{
+        background-attachment: scroll;
+    }
+}
